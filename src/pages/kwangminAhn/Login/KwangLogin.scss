@@ -1,0 +1,81 @@
+@import "../../../styles/Common.scss";
+
+body {
+  height: 100vh;
+  @include flex-center;
+}
+
+.login {
+  width: 350px;
+  height: 380px;
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+
+  h1 {
+    font-size: 45px;
+    height: 20%;
+    font-family: "Lobster", cursive;
+    @include flex-center;
+    margin-top: 20px;
+  }
+
+  .id {
+    width: 350px;
+    height: 40px;
+    @include flex-center;
+
+    input {
+      width: 245px;
+      height: 30px;
+      background-color: #fafafa;
+      border: 1px solid #ebebeb;
+      border-radius: 5px;
+      font-size: 16px;
+      margin: 5px 0px;
+    }
+  }
+
+  .password {
+    width: 350px;
+    height: 40px;
+    @include flex-center;
+
+    input {
+      width: 245px;
+      height: 30px;
+      background-color: #fafafa;
+      border: 1px solid #ebebeb;
+      border-radius: 5px;
+      font-size: 16px;
+      margin: 5px 0px;
+    }
+  }
+
+  .btn {
+    width: 350px;
+    height: 150px;
+    @include flex-center;
+    margin-top: 10px;
+
+    button {
+      width: 250px;
+      height: 30px;
+      background-color: #c0dffd;
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+  }
+
+  .link {
+    width: 350px;
+    height: 10%;
+
+    a {
+      @include flex-center;
+      font-size: 8px;
+    }
+  }
+}
