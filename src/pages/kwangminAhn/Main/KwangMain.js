@@ -1,25 +1,25 @@
-import React from "react";
-import reset from "../../../styles/reset.scss";
-import KwangMainscss from "./KwangMain.scss";
+import React from 'react';
+
+import KwangMainscss from './KwangMain.scss';
 
 const KwangMain = () => {
   return (
     <div className="home">
       <nav className="menuBar">
         <div className="menuBarImg">
-          <i className="fab fa-instagram fa-lg"></i>
+          <i className="fab fa-instagram fa-lg" />
           <div className="Westagram">
             <span>&nbsp;&nbsp;Westagram</span>
           </div>
         </div>
         <div className="menuBarSearch">
           <input type="text" className="inputSearch" placeholder="검색" />
-          <i className="fas fa-search"></i>
+          <i className="fas fa-search" />
         </div>
         <div className="menuBarImg2">
-          <i className="far fa-compass fa-lg"></i>
-          <i className="far fa-heart  fa-lg"></i>
-          <i className="far fa-user fa-lg"></i>
+          <i className="far fa-compass fa-lg" />
+          <i className="far fa-heart  fa-lg" />
+          <i className="far fa-user fa-lg" />
         </div>
       </nav>
       <div className="myFeed">
@@ -36,8 +36,8 @@ const KwangMain = () => {
                 </div>
               </div>
               <div className="feedSetting">
-                {" "}
-                <i className="fas fa-ellipsis-h fa-lg"></i>{" "}
+                {' '}
+                <i className="fas fa-ellipsis-h fa-lg" />{' '}
               </div>
             </div>
             <div className="feedMainImg">
@@ -46,12 +46,12 @@ const KwangMain = () => {
             <div className="feedImgFooter">
               <div className="feedIcons">
                 <div className="feedIcons1">
-                  <i className="fa fa-heart fa-lg"></i>
-                  <i className="far fa-comment fa-lg"></i>
-                  <i className="fas fa-share-square fa-lg"></i>
+                  <i className="fa fa-heart fa-lg" />
+                  <i className="far fa-comment fa-lg" />
+                  <i className="fas fa-share-square fa-lg" />
                 </div>
                 <div className="feedIcons2">
-                  <i className="far fa-bookmark fa-lg"></i>
+                  <i className="far fa-bookmark fa-lg" />
                 </div>
               </div>
               <div className="feedLikes">
@@ -101,18 +101,18 @@ const KwangMain = () => {
               <span className="StoriesTag">스토리</span>
               <span>모두 보기</span>
             </div>
-            <div className="myFeedRightStories1"></div>
-            <div className="myFeedRightStories2"></div>
-            <div className="myFeedRightStories3"></div>
+            <div className="myFeedRightStories1" />
+            <div className="myFeedRightStories2" />
+            <div className="myFeedRightStories3" />
           </div>
           <div className="myFeedRightRecommend">
             <div className="myFeedRightRecommendNav">
               <span className="recommendTag">회원님을 위한 추천</span>
               <span>모두 보기</span>
             </div>
-            <div className="myFeedRightRecommend1"></div>
-            <div className="myFeedRightRecommend2"></div>
-            <div className="myFeedRightRecommend3"></div>
+            <div className="myFeedRightRecommend1" />
+            <div className="myFeedRightRecommend2" />
+            <div className="myFeedRightRecommend3" />
           </div>
           <p>
             Instagram 정보, 지원, 홍보 센터, API, 채용 정보, 개인정보처리방침,

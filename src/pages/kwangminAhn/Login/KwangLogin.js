@@ -1,14 +1,13 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import Reset from "../../../styles/reset.scss";
-import KwangLogincss from "./KwangLogin.scss";
+import KwangLogincss from './KwangLogin.scss';
 
 const KwangLogin = () => {
   const navigate = useNavigate();
 
   const goToMain = () => {
-    navigate("/main");
+    navigate('/Kwangmain');
   };
 
   return (

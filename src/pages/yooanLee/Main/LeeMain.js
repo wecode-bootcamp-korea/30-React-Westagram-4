@@ -1,6 +1,6 @@
-import React from "react";
-import Reset from "../../../styles/reset.scss";
-import LeeMainscss from "./LeeMain.scss";
+import React from 'react';
+
+import LeeMainscss from './LeeMain.scss';
 
 const LeeMain = () => {
   console.log(123);

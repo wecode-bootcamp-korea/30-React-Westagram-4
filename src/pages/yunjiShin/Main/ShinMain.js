@@ -1,6 +1,6 @@
-import React from "react";
-import reset from "../../../styles/reset.scss";
-import ShinMainscss from "./ShinMain.scss";
+import React from 'react';
+
+import ShinMainscss from './ShinMain.scss';
 
 const ShinMain = () => {
   console.log(123);
