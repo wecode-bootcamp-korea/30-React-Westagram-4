@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // 광민 컴포넌트
-import KwangLogin from './pages/kwangminAhn/Login/KwangLogin';
-import KwangMain from './pages/kwangminAhn/Main/KwangMain';
+import AhnLogin from './pages/kwangminAhn/Login/AhnLogin';
+import AhnMain from './pages/kwangminAhn/Main/AhnMain';
 
 //유안 컴포넌트
 import LeeLogin from './pages/yooanLee/Login/LeeLogin';
@@ -17,8 +17,8 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<KwangLogin />} />
-        <Route path="/Kwangmain" element={<KwangMain />} />
+        <Route path="/" element={<AhnLogin />} />
+        <Route path="/Ahnmain" element={<AhnMain />} />
         <Route path="/Lee" element={<LeeLogin />} />
         <Route path="/Leemain" element={<LeeMain />} />
         <Route path="/Shin" element={<ShinLogin />} />

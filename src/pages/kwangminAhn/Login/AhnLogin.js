@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import './LeeLogin.scss';
+import './AhnLogin.scss';
 
-const LeeLogin = () => {
+const AhnLogin = () => {
   console.log(123);
 };
-export default LeeLogin;
+export default AhnLogin;

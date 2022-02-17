@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ShinMainscss from './ShinMain.scss';
+import './ShinMain.scss';
 
 const ShinMain = () => {
   console.log(123);
