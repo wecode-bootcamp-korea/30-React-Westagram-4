@@ -1,0 +1,251 @@
+.main {
+  @mixin mainRight-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 3px 20px 0px 20px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-bottom: 1px solid #e7e7e7;
+
+    .instagramLogo {
+      width: 30px;
+      padding-right: 10px;
+      border-right: 2.5px solid black;
+    }
+
+    .instagram {
+      padding-left: 9px;
+      font-size: 25px;
+      font-family: 'Lobster', cursive;
+    }
+
+    .searchBar {
+      width: 300px;
+      padding-top: 5px;
+      border: 1px solid #e7e7e7;
+      border-radius: 5px;
+      background-color: #fafafa;
+      font-size: 14px;
+    }
+
+    .searchIcon {
+      width: 15px;
+      margin-left: 10px;
+      padding-right: 5px;
+    }
+
+    .exploreIcon {
+      width: 35px;
+      padding-right: 15px;
+    }
+
+    .heartIcon {
+      width: 40px;
+      padding-right: 15px;
+    }
+
+    .profileIcon {
+      width: 23px;
+    }
+  }
+
+  span,
+  p {
+    vertical-align: baseline;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 40px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background-color: #fafafa;
+
+    .feedBtn {
+      margin-top: 5px;
+
+      .heartBtn {
+        margin-right: 10px;
+        margin-left: 5px;
+      }
+
+      .commentBtn {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .feedArticleProfile {
+    display: flex;
+    align-items: center;
+
+    .feedProfile {
+      width: 32px;
+      height: 32px;
+      border-radius: 100px;
+      margin-bottom: 10px;
+    }
+    .feedNickname {
+      display: inline-block;
+      padding-left: 10px;
+    }
+  }
+
+  .feedPicture {
+    height: 500px;
+    width: 500px;
+  }
+
+  .heartBtn {
+    width: 24px;
+    height: 24px;
+  }
+
+  .commentBtn {
+    width: 24px;
+    height: 24px;
+  }
+
+  .shareBtn {
+    width: 24px;
+    height: 24px;
+  }
+
+  .myProfile {
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+  }
+
+  .feedArticle {
+    display: flex;
+    align-items: center;
+  }
+
+  .likes {
+    display: flex;
+    align-items: center;
+  }
+
+  .description {
+    border: 5px 5px 5px 5px;
+
+    .descriptionNickname {
+      font-weight: bold;
+    }
+  }
+
+  .mainRightMe {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 3px 20px 0px 20px;
+    p {
+      padding-left: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .myNickname {
+    color: #999999;
+  }
+
+  .stories,
+  .suggestions {
+    color: #999999;
+  }
+
+  h3 {
+    display: inline;
+    font-size: 14px;
+  }
+
+  .mainRightStoryIndex {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      padding: 15px 20px 0px 20px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+
+  .mainRightSuggestionsIndex {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      padding: 15px 20px 0px 20px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  }
+
+  .mainRightStory,
+  .mainRightSuggestions {
+    width: 325px;
+    height: 170px;
+    border: 2px solid #e7e7e7;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .mainRightStory1 {
+    @include mainRight-center;
+  }
+
+  .mainRightStoryProfile1 {
+    margin-top: 5px;
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+  }
+
+  .mainRightStoryTime1 {
+    color: #999999;
+  }
+
+  .mainRightStory2 {
+    @include mainRight-center;
+  }
+
+  .mainRightStoryProfile2 {
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+  }
+
+  .mainRightStoryTime2 {
+    color: #999999;
+  }
+
+  .mainRightStory3 {
+    @include mainRight-center;
+  }
+
+  .mainRightStoryProfile3 {
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+  }
+
+  .mainRightStoryTime3 {
+    color: #999999;
+  }
+
+  .suggestion {
+    color: #999999;
+  }
+}
