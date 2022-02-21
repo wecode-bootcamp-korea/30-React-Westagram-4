@@ -37,7 +37,7 @@
       color: #999999;
     }
   }
-  button {
+  .loginBtn {
     color: white;
     padding-left: 140px;
     padding-top: 10px;
@@ -48,6 +48,19 @@
     margin-top: 20px;
     margin-bottom: 200px;
     background-color: #c4e1fb;
+  }
+
+  .loginBtnChanged {
+    color: white;
+    padding-left: 140px;
+    padding-top: 10px;
+    padding-right: 140px;
+    padding-bottom: 10px;
+    border: 0px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 200px;
+    background-color: #003569;
   }
   a {
     text-decoration: none;

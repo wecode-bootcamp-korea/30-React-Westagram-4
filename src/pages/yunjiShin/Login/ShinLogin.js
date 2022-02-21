@@ -39,7 +39,12 @@ const ShinLogin = () => {
             onChange={handlePwInput}
           />
         </div>
-        <button type="button" id="btnLogin" onClick={goToMain}>
+        <button
+          className={`loginBtn ${
+            id.indexOf('@') > -1 && pw.length >= 5 ? 'loginBtnChanged' : ''
+          }`}
+          onClick={goToMain}
+        >
           로그인
         </button>
       </section>

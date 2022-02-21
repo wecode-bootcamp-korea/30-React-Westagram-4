@@ -10,3 +10,12 @@
   justify-content: center;
   align-items: center;
 }
+
+@mixin mainRight-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 3px 20px 0px 20px;
+}
