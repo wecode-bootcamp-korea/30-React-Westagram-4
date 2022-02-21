@@ -1,13 +1,13 @@
-.main {
-  @mixin mainRight-center {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 3px 20px 0px 20px;
-  }
+@mixin mainRight-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 3px 20px 0px 20px;
+}
 
+.shinMain {
   nav {
     display: flex;
     justify-content: space-between;
@@ -17,45 +17,58 @@
     padding-right: 50px;
     border-bottom: 1px solid #e7e7e7;
 
-    .instagramLogo {
-      width: 30px;
-      padding-right: 10px;
-      border-right: 2.5px solid black;
-    }
+    .navTopLogo {
+      display: flex;
+      flex-wrap: nowrap;
 
-    .instagram {
-      padding-left: 9px;
-      font-size: 25px;
-      font-family: 'Lobster', cursive;
+      .instagramLogo {
+        width: 40px;
+        padding-right: 10px;
+        border-right: 2.5px solid black;
+      }
+
+      .instagram {
+        padding-left: 9px;
+        font-size: 25px;
+        font-family: 'Lobster', cursive;
+      }
     }
 
     .searchBar {
-      width: 300px;
+      width: 280px;
       padding-top: 5px;
       border: 1px solid #e7e7e7;
       border-radius: 5px;
       background-color: #fafafa;
       font-size: 14px;
+
+      .searchIcon {
+        width: 15px;
+        margin-left: 10px;
+        padding-right: 5px;
+      }
     }
 
-    .searchIcon {
-      width: 15px;
-      margin-left: 10px;
-      padding-right: 5px;
-    }
+    .navRight {
+      display: flex;
+      justify-content: space-around;
 
-    .exploreIcon {
-      width: 35px;
-      padding-right: 15px;
-    }
+      .exploreIcon {
+        width: 25px;
+        height: 25px;
+        margin-right: 15px;
+      }
 
-    .heartIcon {
-      width: 40px;
-      padding-right: 15px;
-    }
+      .heartIcon {
+        width: 25px;
+        height: 25px;
+        margin-right: 15px;
+      }
 
-    .profileIcon {
-      width: 23px;
+      .profileIcon {
+        width: 25px;
+        height: 25px;
+      }
     }
   }
 
@@ -65,6 +78,7 @@
   }
 
   main {
+    position: absolute;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -73,179 +87,213 @@
     padding-right: 70px;
     background-color: #fafafa;
 
-    .feedBtn {
-      margin-top: 5px;
+    #feeds {
+      border: 1px solid #e7e7e7;
 
-      .heartBtn {
-        margin-right: 10px;
-        margin-left: 5px;
+      article {
+        padding: 20px 20px 0px 20px;
+
+        .feedArticle {
+          display: flex;
+          align-items: center;
+
+          .feedArticleProfile {
+            display: flex;
+            align-items: center;
+
+            .feedProfile {
+              width: 32px;
+              height: 32px;
+              border-radius: 100px;
+              margin-bottom: 20px;
+            }
+            .feedNickname {
+              display: inline-block;
+              padding-left: 10px;
+            }
+          }
+        }
+
+        .feedPicture {
+          height: 500px;
+          width: 500px;
+        }
+
+        .feedBtn {
+          margin-top: 5px;
+
+          .heartBtn {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+          }
+
+          .commentBtn {
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+          }
+
+          .shareBtn {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+      .likes {
+        display: flex;
+        align-items: center;
+        padding: 0px 20px 0px 20px;
+
+        .mainRightStoryProfile1 {
+          margin-top: 5px;
+          width: 32px;
+          height: 32px;
+          border-radius: 100px;
+        }
       }
 
-      .commentBtn {
-        margin-right: 10px;
+      .description {
+        padding: 5px 20px 10px 20px;
+        border: 5px 5px 5px 5px;
+
+        .descriptionNickname {
+          font-weight: bold;
+        }
+      }
+
+      .comments {
+        input {
+          width: 100%;
+          background-color: #fafafa;
+          border: 1px solid #e7e7e7;
+          border-left: 0px;
+          border-right: 0px;
+          padding: 10px 10px;
+          margin-bottom: 0px;
+        }
+        button {
+          position: relative;
+          top: -27px;
+          left: 500px;
+          color: #d8ebfc;
+          border: 0px;
+          background-color: #fafafa;
+        }
       }
     }
-  }
 
-  .feedArticleProfile {
-    display: flex;
-    align-items: center;
+    #main-right {
+      .mainRightMe {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 3px 20px 0px 20px;
+        p {
+          padding-left: 20px;
+          font-weight: bold;
+        }
+        .myProfile {
+          width: 32px;
+          height: 32px;
+          border-radius: 100px;
+        }
+        .myNickname {
+          color: #999999;
+        }
+      }
 
-    .feedProfile {
-      width: 32px;
-      height: 32px;
-      border-radius: 100px;
-      margin-bottom: 10px;
+      .mainRightStory {
+        width: 325px;
+        height: 170px;
+        border: 2px solid #e7e7e7;
+        margin-left: 20px;
+        margin-bottom: 10px;
+
+        .mainRightStoryIndex {
+          display: flex;
+          justify-content: space-between;
+
+          h3 {
+            display: inline;
+            font-size: 14px;
+            padding: 15px 20px 0px 20px;
+            font-size: 15px;
+            font-weight: bold;
+          }
+
+          .stories {
+            color: #999999;
+          }
+        }
+
+        .mainRightStory1 {
+          @include mainRight-center;
+
+          .mainRightStoryProfile1 {
+            margin-top: 5px;
+            width: 32px;
+            height: 32px;
+            border-radius: 100px;
+          }
+
+          .mainRightStoryTime1 {
+            color: #999999;
+          }
+        }
+
+        .mainRightStory2 {
+          @include mainRight-center;
+
+          .mainRightStoryProfile2 {
+            width: 32px;
+            height: 32px;
+            border-radius: 100px;
+          }
+
+          .mainRightStoryTime2 {
+            color: #999999;
+          }
+        }
+
+        .mainRightStory3 {
+          @include mainRight-center;
+
+          .mainRightStoryProfile3 {
+            width: 32px;
+            height: 32px;
+            border-radius: 100px;
+          }
+
+          .mainRightStoryTime3 {
+            color: #999999;
+          }
+        }
+      }
+
+      .mainRightSuggestions {
+        width: 325px;
+        height: 170px;
+        border: 2px solid #e7e7e7;
+        margin-left: 20px;
+        margin-bottom: 10px;
+
+        .mainRightSuggestionsIndex {
+          display: flex;
+          justify-content: space-between;
+
+          h3 {
+            padding: 15px 20px 0px 20px;
+            font-size: 15px;
+            font-weight: bold;
+          }
+
+          .suggestion {
+            color: #999999;
+          }
+        }
+      }
     }
-    .feedNickname {
-      display: inline-block;
-      padding-left: 10px;
-    }
-  }
-
-  .feedPicture {
-    height: 500px;
-    width: 500px;
-  }
-
-  .heartBtn {
-    width: 24px;
-    height: 24px;
-  }
-
-  .commentBtn {
-    width: 24px;
-    height: 24px;
-  }
-
-  .shareBtn {
-    width: 24px;
-    height: 24px;
-  }
-
-  .myProfile {
-    width: 32px;
-    height: 32px;
-    border-radius: 100px;
-  }
-
-  .feedArticle {
-    display: flex;
-    align-items: center;
-  }
-
-  .likes {
-    display: flex;
-    align-items: center;
-  }
-
-  .description {
-    border: 5px 5px 5px 5px;
-
-    .descriptionNickname {
-      font-weight: bold;
-    }
-  }
-
-  .mainRightMe {
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 3px 20px 0px 20px;
-    p {
-      padding-left: 20px;
-      font-weight: bold;
-    }
-  }
-
-  .myNickname {
-    color: #999999;
-  }
-
-  .stories,
-  .suggestions {
-    color: #999999;
-  }
-
-  h3 {
-    display: inline;
-    font-size: 14px;
-  }
-
-  .mainRightStoryIndex {
-    display: flex;
-    justify-content: space-between;
-    h3 {
-      padding: 15px 20px 0px 20px;
-      font-size: 15px;
-      font-weight: bold;
-    }
-  }
-
-  .mainRightSuggestionsIndex {
-    display: flex;
-    justify-content: space-between;
-    h3 {
-      padding: 15px 20px 0px 20px;
-      font-size: 15px;
-      font-weight: bold;
-    }
-  }
-
-  .mainRightStory,
-  .mainRightSuggestions {
-    width: 325px;
-    height: 170px;
-    border: 2px solid #e7e7e7;
-    margin-left: 20px;
-    margin-bottom: 10px;
-  }
-
-  .mainRightStory1 {
-    @include mainRight-center;
-  }
-
-  .mainRightStoryProfile1 {
-    margin-top: 5px;
-    width: 32px;
-    height: 32px;
-    border-radius: 100px;
-  }
-
-  .mainRightStoryTime1 {
-    color: #999999;
-  }
-
-  .mainRightStory2 {
-    @include mainRight-center;
-  }
-
-  .mainRightStoryProfile2 {
-    width: 32px;
-    height: 32px;
-    border-radius: 100px;
-  }
-
-  .mainRightStoryTime2 {
-    color: #999999;
-  }
-
-  .mainRightStory3 {
-    @include mainRight-center;
-  }
-
-  .mainRightStoryProfile3 {
-    width: 32px;
-    height: 32px;
-    border-radius: 100px;
-  }
-
-  .mainRightStoryTime3 {
-    color: #999999;
-  }
-
-  .suggestion {
-    color: #999999;
   }
 }

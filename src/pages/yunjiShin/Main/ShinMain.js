@@ -2,9 +2,9 @@ import React from 'react';
 
 import './ShinMain.scss';
 
-const ShinMain = () => {
+const shinMain = () => {
   return (
-    <div className="main">
+    <div className="shinMain">
       <nav>
         <section className="navTopLogo">
           <img
@@ -92,7 +92,10 @@ const ShinMain = () => {
             <span className="descriptionNickname"> human_oo1 </span>
             <span> 바다 #today </span>
           </section>
-          <section className="comments" />
+          <section className="comments">
+            <input placeholder="댓글 달기..." />
+            <button>게시</button>
+          </section>
         </div>
         <div id="main-right">
           <div className="mainRightMe">
