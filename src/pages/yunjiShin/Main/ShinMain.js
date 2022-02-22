@@ -1,6 +1,5 @@
 import React from 'react';
-
-import './ShinMain.scss';
+import './shinMain.scss';
 
 const shinMain = () => {
   return (
@@ -152,4 +151,4 @@ const shinMain = () => {
   );
 };
 
-export default ShinMain;
+export default Main;
