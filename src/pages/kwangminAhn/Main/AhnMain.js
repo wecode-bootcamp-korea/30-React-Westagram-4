@@ -1,8 +1,22 @@
 import React from 'react';
+import { useState } from 'react';
 
 import './AhnMain.scss';
 
 const AhnMain = () => {
+  const [comment, setComment] = useState('');
+  const [commentArr, setCommentArr] = useState([]);
+
+  const handleChange = e => {
+    setComment(e.target.value);
+  };
+
+  const handleClick = () => {
+    commentArr.push(comment);
+    setCommentArr(commentArr);
+    setComment('');
+  };
+
   return (
     <div className="home">
       <nav className="menuBar">
@@ -73,14 +87,23 @@ const AhnMain = () => {
                   <span>Friend</span> 굳~~~~
                   <p>42분전</p>
                 </div>
+                <div>
+                  {commentArr.map((commentItem, index) => {
+                    return <div key={index}>{commentItem}</div>;
+                  })}
+                </div>
               </div>
               <div className="newComment">
                 <input
                   className="inputComment"
                   type="text"
+                  value={comment}
+                  onChange={handleChange}
                   placeholder="댓글 달기..."
                 />
-                <button className="commentBtn">게시</button>
+                <button className="commentBtn" onClick={handleClick}>
+                  게시
+                </button>
               </div>
             </div>
           </article>
