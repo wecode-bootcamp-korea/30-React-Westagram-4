@@ -1,7 +1,34 @@
-import React from 'react';
-import './shinMain.scss';
+import React, { useEffect, useState } from 'react';
+import './ShinMain.scss';
+import ShinComment from './ShinComment';
+import ShinCommentList from './ShinCommentList';
 
-const shinMain = () => {
+const ShinMain = () => {
+  const [comment, setComment] = useState('');
+  const [commentList, setCommentList] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/shinData.json/')
+      .then(res => res.json())
+      .then(data => {
+        setCommentList(data);
+      });
+  }, []);
+
+  let strs = '';
+  const getComment = e => {
+    strs += e.target.value;
+    setComment(strs);
+  };
+
+  const addComment = () => {
+    setCommentList([...commentList, comment]);
+  };
+
+  const submitComment = e => {
+    e.preventDefault();
+  };
+
   return (
     <div className="shinMain">
       <nav>
@@ -91,10 +118,11 @@ const shinMain = () => {
             <span className="descriptionNickname"> human_oo1 </span>
             <span> 바다 #today </span>
           </section>
-          <section className="comments">
-            <input placeholder="댓글 달기..." />
-            <button>게시</button>
-          </section>
+          <form className="comments" onSubmit={submitComment}>
+            <ShinCommentList shinCommentList={commentList} />
+            <input placeholder="댓글 달기..." onChange={getComment} />
+            <button onClick={addComment}>게시</button>
+          </form>
         </div>
         <div id="main-right">
           <div className="mainRightMe">
@@ -151,4 +179,4 @@ const shinMain = () => {
   );
 };
 
-export default Main;
+export default ShinMain;
