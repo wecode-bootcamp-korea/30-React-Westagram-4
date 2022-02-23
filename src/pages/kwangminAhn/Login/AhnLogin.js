@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './AhnLogin.scss';
 
@@ -22,6 +22,19 @@ const AhnLogin = () => {
   const handlePasswordInput = e => {
     SetUserPassword(e.target.value);
   };
+
+  // useEffect(
+  //   () =>
+  //     fetch('http://10.58.6.161:8000/westagram/log-in', {
+  //       method: 'POST',
+  //       body: JSON.stringify({
+  //         password: 'rhkdals@12',
+  //       }),
+  //     })
+  //       .then(res => res.json())
+  //       .then(result => console.log('결과: ', result)),
+  //   []
+  // );
 
   return (
     <div className="login">

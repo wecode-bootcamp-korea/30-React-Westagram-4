@@ -17,6 +17,14 @@ const AhnMain = () => {
     setComment('');
   };
 
+  const data = () => {
+    return fetch('/public/data/commentData.json')
+      .then(response => response.json())
+      .then(json => console.log());
+  };
+
+  data();
+
   return (
     <div className="home">
       <nav className="menuBar">
@@ -86,11 +94,11 @@ const AhnMain = () => {
                 <div className="guestComment">
                   <span>Friend</span> 굳~~~~
                   <p>42분전</p>
-                </div>
-                <div>
-                  {commentArr.map((commentItem, index) => {
-                    return <div key={index}>{commentItem}</div>;
-                  })}
+                  <div>
+                    {commentArr.map((commentItem, index) => {
+                      return <div key={index}>{commentItem}</div>;
+                    })}
+                  </div>
                 </div>
               </div>
               <div className="newComment">

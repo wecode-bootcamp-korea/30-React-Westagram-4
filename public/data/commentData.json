@@ -22,23 +22,5 @@
     "userName": "jayKim",
     "content": "Hey.",
     "isLiked": false
-  },
-  {
-    "id": 5,
-    "userName": "jayLee",
-    "content": "Hey.",
-    "isLiked": false
-  },
-  {
-    "id": 6,
-    "userName": "jayChoi",
-    "content": "Hey.",
-    "isLiked": false
-  },
-  {
-    "id": 7,
-    "userName": "jayAhn",
-    "content": "Hey.",
-    "isLiked": false
   }
 ]
