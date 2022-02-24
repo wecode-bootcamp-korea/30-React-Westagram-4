@@ -1,17 +1,16 @@
 import React from 'react';
-import './LeeMain.scss';
 import Comment from './Comment';
 import { useState, useEffect } from 'react';
+
+import './LeeMain.scss';
 
 function LeeMain() {
   const [comment, setComment] = useState('');
   const [commentList, setCommentList] = useState([]);
 
-  // ->[]: 빈배열의 이유: 빈값을 가지고 오는데 빈값이 json에 있는 빈 배열이기 때문
-
   const getComment = e => {
     setComment(e.target.value);
-  }; // event handler
+  };
 
   const addComment = e => {
     setCommentList(
@@ -26,13 +25,10 @@ function LeeMain() {
   };
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/mock.json') //->api 조소(mock data)
-      .then(res => res.json()) //-> 인자에 넣어줌
+    fetch('http://localhost:3000/data/mock.json')
+      .then(res => res.json())
       .then(data => setCommentList(data));
   }, []);
-
-  // -> 빈배열 이유:딱한번만 가져오기 때문에
-  //
 
   return (
     <div className="main">

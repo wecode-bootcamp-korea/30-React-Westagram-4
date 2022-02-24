@@ -18,9 +18,7 @@ function LeeLogin() {
     setPwValue(e.target.value);
   };
 
-  // const condition = idValue.length > 0 && pwValue.length >0 ? true : false;
   const condition = idValue.includes('@') && pwValue.length > 5;
-  // console.log("condition>>>>");
 
   const goToMain = () => {
     fetch('http://10.58.5.215:8000/users/signin/', {
@@ -59,7 +57,6 @@ function LeeLogin() {
         type="submit"
         onClick={goToMain}
       >
-        {/* <Link to="/main"> */}
         로그인
       </button>
 
