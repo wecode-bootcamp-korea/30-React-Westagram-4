@@ -139,15 +139,24 @@
 
   #new_comment {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-content: center;
-    padding-left: 8px;
+    padding-left: 10px;
     margin: 0;
+    background-color: white;
+    height: 8%;
+    .eachComment {
+      display: flex;
+      justify-content: space-between;
+      .trash-icon {
+        margin-right: 8px;
+      }
+    }
   }
 
   .comment_box {
     background-color: white;
-    height: 8%;
     /* margin-top: 6px; */
   }
 
@@ -160,6 +169,14 @@
   .new_comment_box {
     display: flex;
     border: 1px solid lightgray;
+    width: 100%;
+    justify-content: space-between;
+
+    .comment_form {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   #comment_input {

@@ -23,7 +23,15 @@ function LeeLogin() {
   // console.log("condition>>>>");
 
   const goToMain = () => {
-    navigate('/main');
+    fetch('http://10.58.5.215:8000/users/signin/', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: idValue,
+        password: pwValue,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log('결과:', result));
   };
 
   return (

@@ -1,26 +1,38 @@
 import React from 'react';
-
 import './LeeMain.scss';
+import Comment from './Comment';
 import { useState, useEffect } from 'react';
 
 function LeeMain() {
   const [comment, setComment] = useState('');
   const [commentList, setCommentList] = useState([]);
 
-  // const getComment = e => {
-  //   setComment(e.target.value);
-  // };
+  // ->[]: 빈배열의 이유: 빈값을 가지고 오는데 빈값이 json에 있는 빈 배열이기 때문
 
-  // const addComment = e => {
-  //   setCommentList(commentList.concat([comment]));
-  //   e.preventDefault();
-  // };
+  const getComment = e => {
+    setComment(e.target.value);
+  }; // event handler
+
+  const addComment = e => {
+    setCommentList(
+      commentList.concat([
+        {
+          author: 'Yooan',
+          comment: comment,
+        },
+      ])
+    );
+    e.preventDefault();
+  };
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/mock.json')
-      .then(res => res.json())
+    fetch('http://localhost:3000/data/mock.json') //->api 조소(mock data)
+      .then(res => res.json()) //-> 인자에 넣어줌
       .then(data => setCommentList(data));
   }, []);
+
+  // -> 빈배열 이유:딱한번만 가져오기 때문에
+  //
 
   return (
     <div className="main">
@@ -78,22 +90,19 @@ function LeeMain() {
             </div>
             <div id="comment_box">
               <ul id="new_comment">
-                <li className="a_comment">
-                  <span>we_bee</span>
-                  <span>buzzbuzz</span>
-                </li>
-                <li>
-                  <span id="delete">x</span>
-                </li>
+                <Comment newCommentList={commentList} />
               </ul>
             </div>
             <div className="new_comment_box">
-              <input
-                type="text"
-                placeholder="Add a comment"
-                id="comment_input"
-              />
-              <input type="button" value="post" id="post_button" />
+              <form className="comment_form" onSubmit={addComment}>
+                <input
+                  type="text"
+                  onChange={getComment}
+                  placeholder="Add a comment"
+                  id="comment_input"
+                />
+                <button id="post_button">post</button>
+              </form>
             </div>
           </div>
         </div>
