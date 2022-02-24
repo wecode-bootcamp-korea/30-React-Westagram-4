@@ -1,0 +1,265 @@
+/* common tag */
+
+.main {
+  .color_h5 {
+    margin: 0;
+    padding: 0;
+    color: #a0a0a0;
+  }
+  h4,
+  h5 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .box_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+  }
+
+  .side_box_setup {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-between;
+    margin: 12px 103px 0px 30px;
+    border: 1px solid #dbdbdb;
+  }
+
+  .profile_logo {
+    height: 50px;
+    width: 50px;
+    border: 1px solid #d5ceca;
+    border-radius: 50%;
+
+    &.clickable {
+      border: 1px solid #c72c8d;
+    }
+    // &:hover {
+    //   display: none;
+    // }
+  }
+
+  .menus {
+    display: flex;
+    cursor: pointer;
+    list-style: none;
+    font-size: larger;
+  }
+
+  /* navbar */
+
+  input[type='text']::placeholder {
+    padding-left: 140px;
+  }
+
+  /* Main section  */
+  .main_section {
+    background-color: #fafafa;
+    height: 100vh;
+    display: flex;
+    padding-left: 100px;
+  }
+  /* feeds */
+  .feeds {
+    background-color: #fafafa;
+    height: 100vh;
+    width: 60%;
+  }
+
+  #profile_pic_in_post.profile_logo {
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  /* post */
+  #post {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    width: 100%;
+    height: 83%;
+    border: 1px solid #d5ceca;
+  }
+
+  /* account box */
+  .account_name {
+    background-color: white;
+    border-color: 1px solid gray;
+    height: 10%;
+  }
+
+  .post_img {
+    background-image: url(https://source.unsplash.com/DhKEXSzz3rw//640x960);
+    height: 70%;
+    background-size: cover;
+    border: 1px solid #d5ceca;
+  }
+  /* features box */
+  .features_box {
+    background-color: #ffffff;
+    height: 6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .features_icon {
+    padding-left: 10px;
+  }
+
+  .bookmark_icon {
+    padding-right: 20px;
+  }
+  /*likes  */
+  .likes {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    height: 4%;
+    margin-bottom: 10px;
+  }
+
+  #profile_pic_in-likes.profile_logo {
+    height: 20px;
+    width: 20px;
+    border: 1px solid #d5ceca;
+    border-radius: 50%;
+    margin-right: 4px;
+  }
+
+  /* comment box */
+
+  #new_comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    padding-left: 10px;
+    margin: 0;
+    background-color: white;
+    height: 8%;
+    .eachComment {
+      display: flex;
+      justify-content: space-between;
+      .trash-icon {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .comment_box {
+    background-color: white;
+    /* margin-top: 6px; */
+  }
+
+  #delete {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  /* add a comment box */
+  .new_comment_box {
+    display: flex;
+    border: 1px solid lightgray;
+    width: 100%;
+    justify-content: space-between;
+
+    .comment_form {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  #comment_input {
+    flex: 8;
+    height: 40px;
+    border: none;
+  }
+
+  #comment_input[type='text']::placeholder {
+    padding-left: 10px;
+  }
+
+  #post_button {
+    color: rgb(0, 0, 255, 50%);
+    background-color: white;
+    cursor: pointer;
+    border: none;
+  }
+
+  /* 자식한테 px를 주고 부모는 패딩을줘라  */
+  /* Main-rightside */
+  .main-right {
+    background-color: fafafa;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 6%;
+  }
+
+  .account_box {
+    background-color: fafafa;
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    padding-left: 30px;
+  }
+
+  .texts_in_account_box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+  }
+
+  .info_under_name {
+    color: #a0a0a0;
+  }
+
+  /* story box */
+
+  .story {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  #recommend_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .follow_btn {
+    color: steelblue;
+    font-weight: bolder;
+    background-color: white;
+    border-color: white;
+    border: 0;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  /* copyright */
+  #copyright_box.side_box_setup {
+    background-color: #fafafa;
+    border: none;
+  }
+
+  #copyright.box_name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
