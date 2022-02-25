@@ -10,12 +10,14 @@
   padding: 20px;
   padding-top: 20px;
   padding-bottom: 40px;
+
   h1 {
     font-size: 50px;
     font-family: 'Lobster', cursive;
     margin-bottom: 50px;
   }
-  #inputId {
+
+  .inputId {
     width: 320px;
     height: 40px;
     border: 1px solid #efefef;
@@ -26,7 +28,8 @@
       color: #999999;
     }
   }
-  #inputPw {
+
+  .inputPw {
     width: 320px;
     height: 40px;
     border: 1px solid #efefef;
@@ -37,6 +40,7 @@
       color: #999999;
     }
   }
+
   .loginBtn {
     color: white;
     padding-left: 140px;
@@ -62,6 +66,7 @@
     margin-bottom: 200px;
     background-color: #003569;
   }
+
   a {
     text-decoration: none;
     color: #003569;

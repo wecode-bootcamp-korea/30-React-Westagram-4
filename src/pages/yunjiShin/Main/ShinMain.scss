@@ -82,14 +82,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding-top: 40px;
+    padding-top: 10px;
     padding-left: 70px;
     padding-right: 70px;
     background-color: #fafafa;
 
     #feeds {
-      border: 1px solid #e7e7e7;
-
       article {
         padding: 20px 20px 0px 20px;
 
@@ -140,6 +138,7 @@
           }
         }
       }
+
       .likes {
         display: flex;
         align-items: center;
@@ -164,6 +163,7 @@
 
       .comments {
         height: 36px;
+
         input {
           width: 100%;
           background-color: #fafafa;
@@ -173,6 +173,7 @@
           padding: 10px 10px;
           margin-bottom: 0px;
         }
+
         button {
           position: relative;
           top: -27px;
@@ -191,15 +192,18 @@
         margin-top: 5px;
         margin-bottom: 5px;
         padding: 3px 20px 0px 20px;
+
         p {
           padding-left: 20px;
           font-weight: bold;
         }
+
         .myProfile {
           width: 32px;
           height: 32px;
           border-radius: 100px;
         }
+
         .myNickname {
           color: #999999;
         }

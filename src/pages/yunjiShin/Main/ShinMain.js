@@ -1,28 +1,33 @@
 import React, { useEffect, useState } from 'react';
-import './ShinMain.scss';
 import ShinComment from './ShinComment';
 import ShinCommentList from './ShinCommentList';
+import './ShinMain.scss';
 
 const ShinMain = () => {
   const [comment, setComment] = useState('');
   const [commentList, setCommentList] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/shinData.json/')
+    fetch('/data/shinData.json')
       .then(res => res.json())
       .then(data => {
         setCommentList(data);
       });
   }, []);
 
-  let strs = '';
   const getComment = e => {
-    strs += e.target.value;
-    setComment(strs);
+    setComment(e.target.value);
   };
 
   const addComment = () => {
-    setCommentList([...commentList, comment]);
+    setCommentList(
+      commentList.concat({
+        id: commentList.length + 1,
+        userName: 'memememe',
+        content: comment,
+      })
+    );
+    setComment('');
   };
 
   const submitComment = e => {
@@ -36,7 +41,7 @@ const ShinMain = () => {
           <img
             alt="instagram logo"
             className="instagramLogo"
-            src="/images/instagram.png"
+            src="/images/yunjiShin/instagram.png"
           />
           <span className="instagram">Instagram</span>
         </section>
@@ -44,7 +49,7 @@ const ShinMain = () => {
           <img
             alt="search icon"
             className="searchIcon"
-            src="/images/search.png"
+            src="/images/yunjiShin/search.png"
           />
           검색
         </span>
@@ -52,17 +57,17 @@ const ShinMain = () => {
           <img
             alt="explore icon"
             className="exploreIcon"
-            src="/images/search.png"
+            src="/images/yunjiShin/search.png"
           />
           <img
             alt="heart icon"
             className="heartIcon"
-            src="/images/instagram_heart.png"
+            src="/images/yunjiShin/instagram_heart.png"
           />
           <img
             alt="profile icon"
             className="profileIcon"
-            src="/images/instagram_profile.png"
+            src="/images/yunjiShin/instagram_profile.png"
           />
         </section>
       </nav>
@@ -74,7 +79,7 @@ const ShinMain = () => {
                 <img
                   alt="feed profile"
                   className="feedProfile"
-                  src="/images/good-faces-ouWf8vF1NSo-unsplash.jpg"
+                  src="/images/yunjiShin/good-faces-ouWf8vF1NSo-unsplash.jpg"
                 />
                 <span className="feedNickname">human_oo1 </span>
               </div>
@@ -83,7 +88,7 @@ const ShinMain = () => {
               <img
                 alt="feed article"
                 className="feedPicture"
-                src="/images/photo-1644780295307-eab5f4f430a3.jpeg"
+                src="/images/yunjiShin/photo-1644780295307-eab5f4f430a3.jpeg"
               />
             </section>
             <section className="feedBtn">
@@ -91,17 +96,17 @@ const ShinMain = () => {
                 <img
                   alt="heart button"
                   className="heartBtn"
-                  src="/images/instagram_heart.png"
+                  src="/images/yunjiShin/instagram_heart.png"
                 />
                 <img
                   alt="comment button"
                   className="commentBtn"
-                  src="/images/chat-bubble.png"
+                  src="/images/yunjiShin/chat-bubble.png"
                 />
                 <img
                   alt="export button"
                   className="shareBtn"
-                  src="/images/premium-icon-export-3024597.png"
+                  src="/images/yunjiShin/premium-icon-export-3024597.png"
                 />
               </div>
             </section>
@@ -110,7 +115,7 @@ const ShinMain = () => {
             <img
               alt="right profile1"
               className="mainRightStoryProfile1"
-              src="/images/collins-lesulie-h8F09Am8W5Y-unsplash.jpg"
+              src="/images/yunjiShin/collins-lesulie-h8F09Am8W5Y-unsplash.jpg"
             />
             <span>yourfriendoo1님 외 7명이 좋아합니다.</span>
           </section>
@@ -120,7 +125,11 @@ const ShinMain = () => {
           </section>
           <form className="comments" onSubmit={submitComment}>
             <ShinCommentList shinCommentList={commentList} />
-            <input placeholder="댓글 달기..." onChange={getComment} />
+            <input
+              placeholder="댓글 달기..."
+              onChange={getComment}
+              value={comment}
+            />
             <button onClick={addComment}>게시</button>
           </form>
         </div>
@@ -129,7 +138,7 @@ const ShinMain = () => {
             <img
               alt="right profile0"
               className="myProfile"
-              src="/images/alexa-portoraro-7UuwLkA8rHQ-unsplash.jpg"
+              src="/images/yunjiShin/alexa-portoraro-7UuwLkA8rHQ-unsplash.jpg"
             />
             <p className="myId">mememememe</p>
             <p className="myNickname">myself | coding</p>
@@ -143,7 +152,7 @@ const ShinMain = () => {
               <img
                 alt="story1 profile"
                 className="mainRightStoryProfile1"
-                src="/images/collins-lesulie-h8F09Am8W5Y-unsplash.jpg"
+                src="/images/yunjiShin/collins-lesulie-h8F09Am8W5Y-unsplash.jpg"
               />
               <span>yourfriendoo1</span>
               <span className="mainRightStoryTime1">19분 전</span>
@@ -152,7 +161,7 @@ const ShinMain = () => {
               <img
                 alt="story2 profile"
                 className="mainRightStoryProfile2"
-                src="/images/hamza-nouasria-dPEcZi445OM-unsplash.jpg"
+                src="/images/yunjiShin/hamza-nouasria-dPEcZi445OM-unsplash.jpg"
               />
               <span>yourfriendoo2</span>
               <span className="mainRightStoryTime2">49분 전</span>
@@ -161,7 +170,7 @@ const ShinMain = () => {
               <img
                 alt="right profile3"
                 className="mainRightStoryProfile3"
-                src="/images/photo-1553272725-086100aecf5e.jpeg"
+                src="/images/yunjiShin/photo-1553272725-086100aecf5e.jpeg"
               />
               <span>yourfriendoo33</span>
               <span className="mainRightStoryTime3">4시간 전</span>

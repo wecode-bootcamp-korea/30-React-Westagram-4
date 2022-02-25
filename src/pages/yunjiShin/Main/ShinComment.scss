@@ -1,10 +1,16 @@
 .ShinComment {
-  .userName {
-    font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+
+  section {
+    .userName {
+      font-weight: bold;
+    }
   }
 
   img {
-    width: 24px;
-    height: 24px;
+    width: 15px;
+    height: 15px;
   }
 }

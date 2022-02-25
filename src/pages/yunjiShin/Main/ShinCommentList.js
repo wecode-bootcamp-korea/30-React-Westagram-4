@@ -9,7 +9,7 @@ function ShinCommentList({ shinCommentList }) {
         return (
           <ShinComment
             key={comment.id}
-            userName={comment.userId}
+            userName={comment.userName}
             content={comment.content}
           />
         );

@@ -16,10 +16,10 @@ const ShinLogin = () => {
   };
 
   const goToMain = () => {
-    navigate('/main');
+    navigate('/ShinMain');
   };
 
-  const submitFunction = e => {
+  const handleLogin = e => {
     e.preventDefault();
     fetch('http://10.58.5.214:8000/users/signin', {
       method: 'POST',
@@ -42,12 +42,12 @@ const ShinLogin = () => {
     <div className="login">
       <h1>Westagram</h1>
       <section>
-        <form onSubmit={submitFunction}>
+        <form onSubmit={handleLogin}>
           <div>
             <input
               type="text"
               placeholder="  전화번호, 사용자 이름 또는 이메일"
-              id="inputId"
+              className="inputId"
               onChange={handleIdInput}
             />
           </div>
@@ -55,21 +55,21 @@ const ShinLogin = () => {
             <input
               type="password"
               placeholder="  비밀번호"
-              id="inputPw"
+              className="inputPw"
               onChange={handlePwInput}
             />
           </div>
           <button
             className={`loginBtn ${
-              id.indexOf('@') > -1 && pw.length >= 5 ? 'loginBtnChanged' : ''
+              id.indexOf('@') !== -1 && pw.length >= 5 ? 'loginBtnChanged' : ''
             }`}
-            onClick={goToMain}
+            onClick={handleLogin}
           >
             로그인
           </button>
         </form>
       </section>
-      <div id="forgetPw">
+      <div className="forgetPw">
         <a href="https://www.instagram.com/accounts/password/reset/">
           비밀번호를 잊으셨나요?
         </a>

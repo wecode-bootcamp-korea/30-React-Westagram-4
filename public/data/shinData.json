@@ -2,19 +2,16 @@
   {
     "id": 1,
     "userName": "humanoo4",
-    "content": "헐 바다 어디임?",
-    "isLiked": false
+    "content": "헐 바다 어디임?"
   },
   {
     "id": 2,
     "userName": "yourfriendoo2",
-    "content": "사진 잘 찍네",
-    "isLiked": false
+    "content": "사진 잘 찍네"
   },
   {
     "id": 3,
     "userName": "yourfriendoo3",
-    "content": "재밌었는데ㅠㅠ",
-    "isLiked": true
+    "content": "재밌었는데ㅠㅠ"
   }
 ]
